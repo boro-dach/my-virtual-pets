@@ -3,7 +3,7 @@
     height: 20px;   
     margin-bottom: 10px;
     margin-top: 10px;
-    margin-left: 16px;
+    margin-left: 2vw;
 }
 button{
     background-color: transparent;
@@ -26,10 +26,26 @@ header{
     flex-direction: row;
 }
 .pet{ 
-    margin-right: 16px;
-    margin-left: 16px;
+    margin-right: 3.2vw;
+    margin-left: 3.2vw;
     width: 28px;
     height: 28px;
     margin-top: 6px;
     margin-bottom: 6px;
+}
+
+.pig{
+    display: none;
+}
+.dog{
+    display: none;
+}
+.penguin{
+    display: none;
+}
+.duck{
+    display: none;
+}
+.error_message{
+    display: none;
 }
