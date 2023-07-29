@@ -6,18 +6,19 @@ let activeButtons = 0;
 
 document.getElementsByClassName('score')[0].innerText = `Your score is: ${score}`
 
+
+
+// defining pets
+const pig = document.getElementsByClassName('pig_pet')[0];
+const dog = document.getElementsByClassName('dog_pet')[0];
+const penguin = document.getElementsByClassName('penguin_pet')[0];
+const duck = document.getElementsByClassName('duck_pet')[0];
+
 // making pet buttons responsive
 document.getElementsByClassName('pig')[0].addEventListener('click', selectPig)
 document.getElementsByClassName('dog')[0].addEventListener('click', selectDog)
 document.getElementsByClassName('penguin')[0].addEventListener('click', selectPenguin)
 document.getElementsByClassName('duck')[0].addEventListener('click', selectDuck)
-
-// defining pets
-var pig = document.getElementsByClassName('pig_pet')[0];
-var dog = document.getElementsByClassName('dog_pet')[0];
-var penguin = document.getElementsByClassName('penguin_pet')[0];
-var duck = document.getElementsByClassName('duck_pet')[0];
-
 
 function addPet(){
     if(activeButtons === 0){
