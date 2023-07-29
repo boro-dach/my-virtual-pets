@@ -1,6 +1,10 @@
 document.getElementsByClassName('butt')[0].addEventListener('click', addPet)
 
-let activeButtons = 0
+// defining variables
+let score = 0;
+let activeButtons = 0;
+
+document.getElementsByClassName('score')[0].innerText = `Your score is: ${score}`
 
 function addPet(){    
     if(activeButtons === 0){
