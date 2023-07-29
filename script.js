@@ -6,7 +6,20 @@ let activeButtons = 0;
 
 document.getElementsByClassName('score')[0].innerText = `Your score is: ${score}`
 
-function addPet(){    
+// making pet buttons responsive
+document.getElementsByClassName('pig')[0].addEventListener('click', selectPig)
+document.getElementsByClassName('dog')[0].addEventListener('click', selectDog)
+document.getElementsByClassName('penguin')[0].addEventListener('click', selectPenguin)
+document.getElementsByClassName('duck')[0].addEventListener('click', selectDuck)
+
+// defining pets
+var pig = document.getElementsByClassName('pig_pet')[0];
+var dog = document.getElementsByClassName('dog_pet')[0];
+var penguin = document.getElementsByClassName('penguin_pet')[0];
+var duck = document.getElementsByClassName('duck_pet')[0];
+
+
+function addPet(){
     if(activeButtons === 0){
         document.getElementsByClassName('pig')[0].style.display = 'block';
         activeButtons = activeButtons + 1;
@@ -29,4 +42,29 @@ function addPet(){
             document.getElementsByClassName('error_message')[0].style.display = 'none';
         }, 2000)
     }
+}
+
+function selectPig(){
+    dog.style.display = 'none';
+    penguin.style.display = 'none';
+    duck.style.display = 'none';
+    pig.style.display = 'flex';
+}
+function selectDog(){
+    penguin.style.display = 'none';
+    duck.style.display = 'none';
+    pig.style.display = 'none';
+    dog.style.display = 'flex';
+}
+function selectPenguin(){
+    duck.style.display = 'none';
+    pig.style.display = 'none';
+    dog.style.display = 'none';
+    penguin.style.display = 'flex';
+}
+function selectDuck(){
+    pig.style.display = 'none';
+    dog.style.display = 'none';
+    penguin.style.display = 'none';
+    duck.style.display = 'flex';
 }

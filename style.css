@@ -1,3 +1,7 @@
+p{
+    font-family: 'Montserrat', serif;
+}
+
 .add{
     width: 20px;
     height: 20px;   
@@ -72,11 +76,44 @@ header{
     color: #5E5E5E;
     background-color: #D9D9D9;
     border-radius: 16px;
-    width: 22%;
+    width: 25%;
     text-align: center;
     position: relative;
     left: 70%;
     margin-top: 1.9vh;
     height: 1.8vh;
     min-height: 15px;
+}
+.selected_pet{
+    margin: 0 auto;
+    margin-top: 14vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 51vw;
+}
+.selected_pet__img{
+    height: 23.5vw;
+    width: 23.5vw;
+}
+.selected_pet__name{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+.pig_pet{
+    display: none;
+    transition: 0.2s;
+}
+.dog_pet{
+    display: none;
+    transition: 0.2s;
+}
+.penguin_pet{
+    display: none;
+    transition: 0.2s;
+}
+.duck_pet{
+    display: none;
+    transition: 0.2s;
 }
