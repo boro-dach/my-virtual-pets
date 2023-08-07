@@ -6,13 +6,15 @@ let activeButtons = 0;
 
 document.getElementsByClassName('score')[0].innerText = `Your score is: ${score}`
 
-
-
 // defining pets
 const pig = document.getElementsByClassName('pig_pet')[0];
 const dog = document.getElementsByClassName('dog_pet')[0];
 const penguin = document.getElementsByClassName('penguin_pet')[0];
 const duck = document.getElementsByClassName('duck_pet')[0];
+
+const petStat = document.querySelector('.pet_status')
+
+petStat.style.display = 'none';
 
 // making pet buttons responsive
 document.getElementsByClassName('pig')[0].addEventListener('click', selectPig)
@@ -50,12 +52,18 @@ function selectPig(){
     penguin.style.display = 'none';
     duck.style.display = 'none';
     pig.style.display = 'flex';
+    petStat.style.display = 'block';
+    petStat.id = 'pig'
+    // petStat.innerText = 'pig'
 }
 function selectDog(){
     penguin.style.display = 'none';
     duck.style.display = 'none';
     pig.style.display = 'none';
     dog.style.display = 'flex';
+    petStat.style.display = 'block';
+    petStat.id = 'dog'
+    petStat.innerText = 'dog'
 }
 function selectPenguin(){
     duck.style.display = 'none';

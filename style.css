@@ -117,3 +117,23 @@ header{
     display: none;
     transition: 0.2s;
 }
+.pet_status{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7.701vh;
+    width: 76.923vw;
+    margin: 0 auto;
+    align-items: start;
+}
+.status_text{
+    padding: 2px 0px 2px 6px;
+    font-family: 'Montserrat', serif;
+    font-size: 8;
+    font-weight: medium;
+    color: white;
+}
+.stat_bar{
+    background-color: rgb(246, 197, 128);
+    border-radius: 20px;
+}
