@@ -56,7 +56,7 @@ header{
 .duck{
     display: none;
 }
-.error_message{
+.error_overflow{
     background-color: rgba(0, 0, 0, 0.1);
     display: none;
     font-family: 'Montserrat', serif;
@@ -100,6 +100,7 @@ header{
     font-size: 24px;
     font-weight: 600;
     margin: 0;
+    margin-bottom: 15px;
 }
 .pig_pet{
     display: none;
@@ -132,8 +133,40 @@ header{
     font-size: 8;
     font-weight: medium;
     color: white;
+    margin: 0;
 }
 .stat_bar{
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.food{
     background-color: rgb(246, 197, 128);
+}
+.water{
+    background-color: rgb(166, 215, 243);
+}
+.health{
+    background-color: rgb(136, 243, 146);
+}
+.stat_bar__fill{
+    height: 20px;
+    border-radius: 8px;
+}
+#food{
+    transition: 0.3s;
+    background-color: rgb(252, 147, 0);
+    width: 2%;
+    border-radius: 20px;
+}
+#water{
+    transition: 0.3s;
+    background-color: rgb(59, 175, 242);
+    width: 2%;
+    border-radius: 20px;
+}
+#health{
+    transition: 0.3s;
+    background-color: rgb(11, 219, 30);
+    width: 2%;
     border-radius: 20px;
 }
