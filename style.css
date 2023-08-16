@@ -1,3 +1,6 @@
+html{
+    height: 100%;
+}
 p{
     font-family: 'Montserrat', serif;
 }
@@ -76,13 +79,14 @@ header{
     color: #5E5E5E;
     background-color: #D9D9D9;
     border-radius: 16px;
-    width: 25%;
     text-align: center;
     position: relative;
     left: 70%;
     margin-top: 1.9vh;
     height: 1.8vh;
     min-height: 15px;
+    display: inline;
+    padding: 0 3vw 0 3vw;
 }
 .selected_pet{
     margin: 0 auto;
@@ -122,7 +126,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 7.701vh;
+    height: 100%;
     width: 76.923vw;
     margin: 0 auto;
     align-items: start;
@@ -169,4 +173,36 @@ header{
     background-color: rgb(11, 219, 30);
     width: 2%;
     border-radius: 20px;
+}
+.version{
+    font-family: 'Montserrat', serif;
+    font-size: 10px;
+    color: #4d4d4d;
+    text-align: start;
+    display: inline;
+    margin: 0;
+}
+.buttons{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 67vw;
+}
+.buttons button{
+    font-family: 'Montserrat', serif;
+    font-size: 12px;
+    padding: 1vh 5vw;
+    border-radius: 10px;
+    color: white;
+    
+}
+.feed{
+    background-color: #FC9301;
+}
+.drink{
+    background-color: #3BAFF2;
+}
+.heal{
+    background-color: #31F543;
 }

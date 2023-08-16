@@ -1,10 +1,142 @@
+//sleep function//
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+//end//
+
+//pet adding button//
 document.getElementsByClassName('butt')[0].addEventListener('click', addPet)
+//end//
 
 // defining variables
-let score = 0;
+let score = 5;
 let activeButtons = 0;
+let pigActivated = false
+let dogActivated = false
+let penguinActivated = false
+let duckActivated = false
+//end//
 
-document.getElementsByClassName('score')[0].innerText = `Your score is: ${score}`
+//score logics//
+//show score
+function showScore(){
+    document.getElementsByClassName('score__value')[0].innerText = `Your score is: ${score}`
+}
+//pets cost:
+const pigCost = 0
+const dogCost = 100
+const penguinCost = 500
+const duckCost = 1000
+//if bought?
+let pigBought = false
+let dogBought = false
+let penguinBought = false
+let duckBought = false
+////pets stats decreasing
+//pig:
+async function pigStatsDowner(){
+    pigActivated = true
+    while (pigFood > 5 && pigWater > 5 && pigHealth > 5){
+        if(petStat.id === 'pig'){
+            await sleep(5000)
+            pigFood = pigFood - 5
+            pigWater = pigWater - 5
+            pigHealth = pigHealth - 5
+            pigShowStats()
+            console.log(petStat.id)
+        }
+        else{
+            await sleep(5000)
+            pigFood = pigFood - 5
+            pigWater = pigWater - 5
+            pigHealth = pigHealth - 5
+        }
+    }
+}
+//dog
+async function dogStatsDowner(){
+    while (dogFood > 5 && dogWater > 5 && dogHealth > 5){
+        if(petStat.id === 'dog'){
+            dogFood = dogFood - 5
+            dogWater = dogWater - 5
+            dogHealth = dogHealth - 5
+            dogShowStats()
+            console.log(petStat.id)
+            await sleep(5000)
+        }
+        else{
+            await sleep(5000)
+            dogFood = dogFood - 5
+            dogWater = dogWater - 5
+            dogHealth = dogHealth - 5
+        }
+    }
+}
+//penguin
+async function penguinStatsDowner(){
+    while (penguinFood > 5 && penguinWater > 5 && penguinHealth > 5){
+        if(petStat.id === 'penguin'){
+            await sleep(5000)
+            penguinFood = penguinFood - 5
+            penguinWater = penguinWater - 5
+            penguinHealth = penguinHealth - 5
+            penguinShowStats()
+            console.log(petStat.id)
+        }
+        else{
+            await sleep(5000)
+            penguinFood = penguinFood - 5
+            penguinWater = penguinWater - 5
+            penguinHealth = penguinHealth - 5
+        }
+    }
+}
+//duck
+async function duckStatsDowner(){
+    while (duckFood > 5 && duckWater > 5 && duckHealth > 5){
+        if(petStat.id === 'duck'){
+            await sleep(5000)
+            duckFood = duckFood - 5
+            duckWater = duckWater - 5
+            duckHealth = duckHealth - 5
+            duckShowStats()
+            console.log(petStat.id)
+        }
+        else{
+            await sleep(5000)
+            duckFood = duckFood - 5
+            duckWater = duckWater - 5
+            duckHealth = duckHealth - 5
+        }
+        
+    }
+}
+////show stats
+//for pig
+function pigShowStats(){
+    document.getElementById('food').style.width = `${pigFood}%`
+    document.getElementById('water').style.width = `${pigWater}%`
+    document.getElementById('health').style.width = `${pigHealth}%`
+}
+//for dog
+function dogShowStats(){   
+    document.getElementById('food').style.width = `${dogFood}%`
+    document.getElementById('water').style.width = `${dogWater}%`
+    document.getElementById('health').style.width = `${dogHealth}%`
+}
+//for penguin
+function penguinShowStats(){   
+    document.getElementById('food').style.width = `${penguinFood}%`
+    document.getElementById('water').style.width = `${penguinWater}%`
+    document.getElementById('health').style.width = `${penguinHealth}%`
+}
+//for duck
+function duckShowStats(){   
+    document.getElementById('food').style.width = `${duckFood}%`
+    document.getElementById('water').style.width = `${duckWater}%`
+    document.getElementById('health').style.width = `${duckHealth}%`
+}
+//end//
 
 // defining pets//
 const pig = document.getElementsByClassName('pig_pet')[0];
@@ -30,24 +162,24 @@ let pigFood = 100
 let pigWater = 100
 let pigHealth = 100
 //for dog:
-let dogFood = 80
-let dogWater = 80
-let dogHealth = 80
+let dogFood = 100
+let dogWater = 100
+let dogHealth = 100
 //for penguin:
-let penguinFood = 60
-let penguinWater = 60
-let penguinHealth = 40
+let penguinFood = 100
+let penguinWater = 100
+let penguinHealth = 100
 //for duck:
-let duckFood = 10
-let duckWater = 19
-let duckHealth = 45
+let duckFood = 100
+let duckWater = 100
+let duckHealth = 100
 //end//
 
 //setting default pet names//
-let pigName = 'popa'
-let dogName = 'popa'
-let penguinName = 'popa'
-let duckName = 'popa'
+let pigName = 'HONekzT6fqO6639izmoaUq13BMkGhclytYHQhqXv5jasa5XnBA'
+let dogName = 'HONekzT6fqO6639izmoaUq13BMkGhclytYHQhqXv5jasa5XnBA'
+let penguinName = 'HONekzT6fqO6639izmoaUq13BMkGhclytYHQhqXv5jasa5XnBA'
+let duckName = 'HONekzT6fqO6639izmoaUq13BMkGhclytYHQhqXv5jasa5XnBA'
 //end//
 
 //pet adding button//
@@ -79,7 +211,7 @@ function addPet(){
 
 //pet selecting//
 function selectPig(){
-    if (pigName === 'popa')
+    if (pigName === 'HONekzT6fqO6639izmoaUq13BMkGhclytYHQhqXv5jasa5XnBA')
     {
         pigName = prompt('Please enter name for this pet:');
         document.getElementsByClassName('selected_pet__name')[0].innerText = pigName
@@ -93,12 +225,12 @@ function selectPig(){
     pig.style.display = 'flex';
     petStat.style.display = 'block';
     petStat.id = 'pig';
-    document.getElementById('food').style.width = `${pigFood}%`
-    document.getElementById('water').style.width = `${pigWater}%`
-    document.getElementById('health').style.width = `${pigWater}%`
+    pigShowStats()
+    pigBought = true
+    pigStatsDowner()
 }
 function selectDog(){
-    if (dogName === 'popa')
+    if (dogName === 'HONekzT6fqO6639izmoaUq13BMkGhclytYHQhqXv5jasa5XnBA')
     {
         dogName = prompt('Please enter name for this pet:');
         document.getElementsByClassName('selected_pet__name')[1].innerText = dogName
@@ -112,12 +244,12 @@ function selectDog(){
     dog.style.display = 'flex';
     petStat.style.display = 'block';
     petStat.id = 'dog';
-    document.getElementById('food').style.width = `${dogFood}%`
-    document.getElementById('water').style.width = `${dogWater}%`
-    document.getElementById('health').style.width = `${dogHealth}%`
+    dogShowStats()
+    dogBought = true
+    dogStatsDowner()
 }
 function selectPenguin(){
-    if (penguinName === 'popa')
+    if (penguinName === 'HONekzT6fqO6639izmoaUq13BMkGhclytYHQhqXv5jasa5XnBA')
     {
         penguinName = prompt('Please enter name for this pet:');
         document.getElementsByClassName('selected_pet__name')[2].innerText = penguinName
@@ -129,12 +261,12 @@ function selectPenguin(){
     pig.style.display = 'none';
     dog.style.display = 'none';
     penguin.style.display = 'flex';
-    document.getElementById('food').style.width = `${penguinFood}%`
-    document.getElementById('water').style.width = `${penguinWater}%`
-    document.getElementById('health').style.width = `${penguinHealth}%`
+    pigShowStats()
+    penguinBought = true
+    penguinStatsDowner()
 }
 function selectDuck(){
-    if (duckName === 'popa')
+    if (duckName === 'HONekzT6fqO6639izmoaUq13BMkGhclytYHQhqXv5jasa5XnBA')
     {
         duckName = prompt('Please enter name for this pet:');
         document.getElementsByClassName('selected_pet__name')[3].innerText = duckName
@@ -146,9 +278,9 @@ function selectDuck(){
     dog.style.display = 'none';
     penguin.style.display = 'none';
     duck.style.display = 'flex';
-    document.getElementById('food').style.width = `${duckFood}%`
-    document.getElementById('water').style.width = `${duckWater}%`
-    document.getElementById('health').style.width = `${duckHealth}%`
+    dogShowStats()
+    duckBought = true
+    duckStatsDowner()
+
 }
 //end//
-
